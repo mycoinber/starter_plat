@@ -11,34 +11,41 @@ const props = defineProps({
     default: () => ({}),
   },
 });
+
+const bgPath = computed(() => {
+  // если есть offer и есть background[0].path — берем его
+  if (
+    props.data.offer &&
+    props.data.offer.background &&
+    props.data.offer.background[0] &&
+    props.data.offer.background[0].path
+  ) {
+    return props.data.offer.background[0].path;
+  }
+  // иначе — берем introImage[0].path
+  return props.data.article?.introImage?.[0]?.path || '';
+});
+
 </script>
 
 <template>
-  <section
-    :class="[styles.hero, data.offer ? styles.offer : '']"
-    :id="data._id"
-    :style="{
-      backgroundImage:
-        'url(https://apexpredators.com/wp-content/uploads/2025/01/Apex-shark-expeditions-shark-facts-image-2048x995.jpg)',
-    }"
-  >
+  <section :class="[styles.hero, data.offer ? styles.offer : '']" :id="data._id" :style="{
+    backgroundImage:
+      'url(/api/media/' + bgPath + ')',
+  }">
     <div class="container">
       <div :class="styles.contentWrapper">
         <div :class="styles.textBlock">
-          <h1>It has survived not only five centuries</h1>
+          <h2>{{ data.offer.title }}</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            {{ data.offer.description }}
           </p>
-          <GeneralButtonTwo
-            :data="{
-              link: '/go',
-              title: data?.buttonText || 'Play Now',
-              target: '_blank',
-              rel: 'noopener noreferrer',
-            }"
-          />
+          <GeneralButtonTwo :data="{
+            link: data?.offer?.link,
+            title: data?.buttonText || 'Play Now',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          }" />
         </div>
       </div>
     </div>
@@ -73,6 +80,7 @@ const props = defineProps({
   width: 100%;
   position: relative;
   z-index: 2;
+
   @include media(tablet) {
     position: absolute;
     bottom: 4rem;
@@ -82,7 +90,7 @@ const props = defineProps({
   }
 }
 
-h1 {
+h2 {
   font-weight: 500;
   font-size: 5rem;
   line-height: 100%;
@@ -92,6 +100,7 @@ h1 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+
   @include media(tablet) {
     font-size: 2.875rem;
     margin: 0 0 1rem;

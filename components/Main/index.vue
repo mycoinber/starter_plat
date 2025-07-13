@@ -63,8 +63,12 @@ if (import.meta.server) {
     <MainLoader />
   </div>
 
-  <MainHero />
-  <MainCasinoBanners />
+  <DelayHydration>
+    <MainHero v-if="!isBot" :data="data" />
+    <MainBanners v-if="!isBot" :data="data" />
+  </DelayHydration>
+
+
 
   <MainTitle v-if="data.article.H1" :data="data" />
 
@@ -118,12 +122,10 @@ if (import.meta.server) {
     width: 100%;
     height: 20%;
     z-index: -1;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.68) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.68) 50%,
+        rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
   }
 
@@ -135,11 +137,9 @@ if (import.meta.server) {
     width: 100%;
     height: 70%;
     z-index: -1;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      var(--background-01)
-    );
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0),
+        var(--background-01));
     pointer-events: none;
   }
 }

@@ -14,7 +14,7 @@ const props = defineProps({
   <section :class="styles.block">
     <div class="container">
       <div :class="styles.wrapper">
-        <h2 :class="styles.title">{{ data.article.H1 }}</h2>
+        <h1 :class="styles.title">{{ data.article.H1 }}</h1>
         <div :class="styles.intro" v-html="data.article.intro"></div>
       </div>
     </div>
