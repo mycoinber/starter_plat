@@ -1,0 +1,13 @@
+@mixin media($type) {
+  @if $type == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $type == tablet {
+    @media (max-width: 1025px) {
+      @content;
+    }
+  }  @else {
+    @warn "Неизвестный тип медиа-запроса: #{$type}";
+  }
+}

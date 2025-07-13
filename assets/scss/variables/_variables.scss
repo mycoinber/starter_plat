@@ -1,0 +1,26 @@
+:root {
+    /* Цвета фона */
+    --background-01: #1F2227;
+    --background-02: #2A2E34;
+
+    /* Основные цвета */
+    --color-white: #ffffff;
+    --color-black: #191A1E;
+    --color-black-02:#000000;
+    --color-01: #999DA4;
+    --color-03: #ffe500;
+    --color-04:#E2C07BB2;
+    --add-gold:#FFB921;
+    --color-gradient: linear-gradient(111.94deg, #FFB921 11.86%, #FFC444 55.35%, #C99627 98.85%);
+   --color-gradient-gold:  linear-gradient(280.74deg, rgba(226, 192, 123, 0.7) -9.32%, rgba(226, 192, 123, 0) 81.38%);
+ 
+    /* Границы */
+    --border: #E1E5EC;
+      --border-2: #e1e5ec22;
+
+    /* Шрифты */
+    --font-01: "Inter", sans-serif;
+
+    // transition
+     --transition: 0.4s all;
+}
