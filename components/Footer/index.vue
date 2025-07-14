@@ -87,7 +87,7 @@ const logos = [
   gap: 2rem;
   padding: 3rem 0 1rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     align-items: flex-start;
     padding: 1rem 0;
   }
@@ -99,7 +99,7 @@ const logos = [
   justify-content: space-between;
   gap: 5rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 0;
@@ -114,7 +114,7 @@ const logos = [
   margin: 0;
   padding: 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.675rem;
@@ -138,7 +138,7 @@ const logos = [
     color: var(--color-white);
     text-align: center;
 
-    @include media(tablet) {
+    @include media(mobile) {
       text-align: left;
     }
 
@@ -151,7 +151,7 @@ const logos = [
   display: flex;
   gap: 1.313rem;
   align-items: center;
-  @include media(tablet) {
+  @include media(mobile) {
     width: 100%;
     justify-content: center;
     margin-bottom: 2rem;
@@ -170,7 +170,7 @@ const logos = [
 }
 .copyright {
   font-size: 0.875rem;
-  @include media(tablet) {
+  @include media(mobile) {
     text-align: center;
     margin: 0 auto;
   }

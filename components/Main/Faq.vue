@@ -67,7 +67,7 @@ const toggleFAQ = (index) => {
 .block {
   margin: 7.5rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 5rem 0;
   }
 }
@@ -96,7 +96,7 @@ const toggleFAQ = (index) => {
   font-weight: 700;
   transition: color 0.3s ease;
 
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 1.25rem;
   }
 
@@ -116,7 +116,9 @@ const toggleFAQ = (index) => {
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
   opacity: 0;
 
   &.active {
@@ -124,7 +126,7 @@ const toggleFAQ = (index) => {
     opacity: 1;
     padding: 1rem 0;
 
-    @include media(tablet) {
+    @include media(mobile) {
       padding: 0.5rem 0;
     }
   }

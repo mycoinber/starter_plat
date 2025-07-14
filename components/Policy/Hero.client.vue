@@ -207,7 +207,7 @@ watch(offer, (newData) => {}, { immediate: true });
   z-index: 2;
   margin-bottom: 7.5rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin-bottom: 5rem;
   }
 
@@ -233,7 +233,7 @@ watch(offer, (newData) => {}, { immediate: true });
   grid-template-columns: 75% 25%;
   gap: 2rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     display: flex;
     flex-direction: column;
   }
@@ -252,7 +252,7 @@ watch(offer, (newData) => {}, { immediate: true });
     height: 100%;
     object-fit: cover;
 
-    @include media(tablet) {
+    @include media(mobile) {
       object-fit: contain;
       object-position: top center;
     }
@@ -287,7 +287,7 @@ watch(offer, (newData) => {}, { immediate: true });
   border-radius: 0.625rem;
   overflow: hidden;
 
-  @include media(tablet) {
+  @include media(mobile) {
     height: 20rem;
   }
 }
@@ -297,7 +297,7 @@ watch(offer, (newData) => {}, { immediate: true });
   align-items: center;
   gap: 1rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     display: none;
   }
 }
@@ -328,7 +328,7 @@ watch(offer, (newData) => {}, { immediate: true });
   margin: 0;
   padding: 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 1.25rem;
     margin: 0 auto;
     text-align: center;
@@ -367,7 +367,7 @@ watch(offer, (newData) => {}, { immediate: true });
   border: 0.063rem solid var(--border);
   overflow: hidden;
 
-  @include media(tablet) {
+  @include media(mobile) {
     left: -0.5rem;
     top: -0.5rem;
     width: 3rem;

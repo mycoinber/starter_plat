@@ -121,7 +121,7 @@ const toggleMenu = () => {
   width: 100%;
   border-bottom: 0.063rem solid var(--border-2);
 
-  @include media(tablet) {
+  @include media(mobile) {
     padding: 0.125rem;
     border: none;
   }
@@ -133,7 +133,7 @@ const toggleMenu = () => {
   gap: 1rem;
   padding: 1.375rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     padding: 1.063rem 0.875rem;
     border-radius: 0.688rem;
     background: var(--background-02);
@@ -147,7 +147,7 @@ const toggleMenu = () => {
   border-radius: 0.25rem;
   overflow: hidden;
 
-  @include media(tablet) {
+  @include media(mobile) {
     min-width: 2rem;
     height: 2rem;
     min-height: 2rem;
@@ -168,7 +168,7 @@ const toggleMenu = () => {
 .nav {
   max-width: 60%;
 
-  @include media(tablet) {
+  @include media(mobile) {
     display: none;
   }
 }
@@ -227,7 +227,7 @@ const toggleMenu = () => {
     border-radius: 0.063rem;
   }
 
-  @include media(tablet) {
+  @include media(mobile) {
     display: flex;
   }
 
@@ -256,7 +256,9 @@ const toggleMenu = () => {
   padding: 3rem 1rem 1rem;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   flex-direction: column;
 
   ul {
@@ -275,7 +277,7 @@ const toggleMenu = () => {
     }
   }
 
-  @include media(tablet) {
+  @include media(mobile) {
     display: flex;
   }
 }
@@ -295,7 +297,7 @@ const toggleMenu = () => {
   align-items: center;
   gap: 1rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     gap: 0.25rem;
   }
 }

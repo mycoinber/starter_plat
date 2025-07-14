@@ -59,7 +59,7 @@ function toggle() {
 .block {
   margin: 3rem 0 7.5rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 2rem 0 5rem 0;
   }
 }
@@ -91,7 +91,7 @@ function toggle() {
   font-weight: 400;
   color: var(--color-black-02);
 
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 0.875rem;
   }
 }
@@ -101,7 +101,7 @@ function toggle() {
   transition: transform 0.3s;
   font-size: 1.5rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 0.875rem;
   }
 
@@ -113,7 +113,9 @@ function toggle() {
 .listWrapper {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0;
 
   &.active {

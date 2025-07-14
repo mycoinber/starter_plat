@@ -20,19 +20,27 @@ const props = defineProps({
       <!--  list -->
       <div :class="styles.list">
         <!--  item -->
-        <div v-for="banner in data.offer.sections" :key="banner.id" :class="styles.item"
-          :style="{ backgroundImage: `url(/api/media/${banner.images[0].path})` }">
+        <div
+          v-for="banner in data.offer.sections"
+          :key="banner.id"
+          :class="styles.item"
+          :style="{
+            backgroundImage: `url(/api/media/${banner.images[0].path})`,
+          }"
+        >
           <!--  item content -->
           <div :class="styles['item-text']">
             <h3>{{ banner.cta }}</h3>
             <p>{{ banner.headline }}</p>
           </div>
-          <GeneralButtonTwo :data="{
-            link: banner.link,
-            title: 'Play Now',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          }" />
+          <GeneralButtonTwo
+            :data="{
+              link: banner.link,
+              title: 'Play Now',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }"
+          />
         </div>
       </div>
     </div>
@@ -73,8 +81,11 @@ h2 {
   justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @include media(tablet) {
+  @include media(mobile) {
     width: 20.813rem;
     min-width: 20.813rem;
     height: 9.375rem;
@@ -107,8 +118,7 @@ h3 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 1.438rem;
   }
 }

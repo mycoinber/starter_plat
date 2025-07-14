@@ -87,7 +87,7 @@ const wrapperClasses = computed(() => {
 .block {
   margin: 7.5rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 5rem 0;
   }
 }
@@ -98,7 +98,7 @@ const wrapperClasses = computed(() => {
   gap: 2rem;
   width: 100%;
 
-  @include media(tablet) {
+  @include media(mobile) {
     flex-direction: column;
   }
 }
@@ -109,7 +109,7 @@ const wrapperClasses = computed(() => {
   border-radius: 1.875rem;
   background: var(--background-02);
 
-  @include media(tablet) {
+  @include media(mobile) {
     padding: 1.875rem 1rem;
   }
 }
@@ -117,7 +117,7 @@ const wrapperClasses = computed(() => {
 .reverse:nth-child(odd) .wrapper {
   flex-direction: row-reverse;
 
-  @include media(tablet) {
+  @include media(mobile) {
     flex-direction: column;
   }
 }
@@ -132,7 +132,7 @@ const wrapperClasses = computed(() => {
   overflow: hidden;
   background: var(--background-02);
 
-  @include media(tablet) {
+  @include media(mobile) {
     height: 21.875rem;
     min-height: 21.875rem;
   }

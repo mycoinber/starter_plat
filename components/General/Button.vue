@@ -37,7 +37,7 @@ const props = defineProps({
   transition: 0.4s all;
   border: 0.063rem solid var(--add-gold);
 
-  @include media(tablet) {
+  @include media(mobile) {
     padding: 0.438rem 0.875rem;
   }
 
@@ -55,7 +55,7 @@ const props = defineProps({
     transform: translate(0, -50%);
     transition: var(--transition);
 
-    @include media(tablet) {
+    @include media(mobile) {
       display: none;
     }
   }

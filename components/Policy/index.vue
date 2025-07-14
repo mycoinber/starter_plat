@@ -115,7 +115,7 @@ if (import.meta.server) {
   z-index: 2;
   margin-bottom: 7.5rem;
 
-  @include media(tablet) {
+  @include media(mobile) {
     height: fit-content;
     margin-bottom: 5rem;
   }
@@ -150,7 +150,7 @@ if (import.meta.server) {
     height: 100%;
     object-fit: cover;
 
-    @include media(tablet) {
+    @include media(mobile) {
       object-fit: contain;
       object-position: top center;
     }

@@ -62,7 +62,7 @@ function toggle() {
 .block {
   margin: 7.5rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 5rem 0;
   }
 }

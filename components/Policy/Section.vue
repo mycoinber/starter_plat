@@ -86,7 +86,7 @@ onMounted(() => {
 .block {
   margin: 2rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 1rem 0;
   }
 }
@@ -97,7 +97,7 @@ onMounted(() => {
   gap: 2rem;
   width: 100%;
 
-  @include media(tablet) {
+  @include media(mobile) {
     flex-direction: column;
   }
 }

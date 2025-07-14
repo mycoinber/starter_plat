@@ -25,7 +25,7 @@ const props = defineProps({
 .block {
   margin: 3rem 0 3rem 0;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin: 2rem 0;
   }
 }
@@ -33,7 +33,7 @@ const props = defineProps({
 .title {
   text-align: center;
 
-  @include media(tablet) {
+  @include media(mobile) {
     text-align: start;
   }
 }

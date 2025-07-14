@@ -23,16 +23,18 @@ const bgPath = computed(() => {
     return props.data.offer.background[0].path;
   }
   // иначе — берем introImage[0].path
-  return props.data.article?.introImage?.[0]?.path || '';
+  return props.data.article?.introImage?.[0]?.path || "";
 });
-
 </script>
 
 <template>
-  <section :class="[styles.hero, data.offer ? styles.offer : '']" :id="data._id" :style="{
-    backgroundImage:
-      'url(/api/media/' + bgPath + ')',
-  }">
+  <section
+    :class="[styles.hero, data.offer ? styles.offer : '']"
+    :id="data._id"
+    :style="{
+      backgroundImage: 'url(/api/media/' + bgPath + ')',
+    }"
+  >
     <div class="container">
       <div :class="styles.contentWrapper">
         <div :class="styles.textBlock">
@@ -40,12 +42,14 @@ const bgPath = computed(() => {
           <p>
             {{ data.offer.description }}
           </p>
-          <GeneralButtonTwo :data="{
-            link: data?.offer?.link,
-            title: data?.buttonText || 'Play Now',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          }" />
+          <GeneralButtonTwo
+            :data="{
+              link: data?.offer?.link,
+              title: data?.buttonText || 'Play Now',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }"
+          />
         </div>
       </div>
     </div>
@@ -81,7 +85,7 @@ const bgPath = computed(() => {
   position: relative;
   z-index: 2;
 
-  @include media(tablet) {
+  @include media(mobile) {
     position: absolute;
     bottom: 4rem;
     width: 100%;
@@ -101,7 +105,7 @@ h2 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 
-  @include media(tablet) {
+  @include media(mobile) {
     font-size: 2.875rem;
     margin: 0 0 1rem;
   }
@@ -116,7 +120,7 @@ p {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 
-  @include media(tablet) {
+  @include media(mobile) {
     margin-bottom: 1.5rem;
   }
 }
