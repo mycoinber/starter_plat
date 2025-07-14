@@ -67,8 +67,8 @@ const toggleFAQ = (index) => {
 .block {
   margin: 7.5rem 0;
 
-  @include media(mobile) {
-    margin: 5rem 0;
+  @include media(tablet) {
+    margin: 3rem 0;
   }
 }
 
@@ -96,7 +96,7 @@ const toggleFAQ = (index) => {
   font-weight: 700;
   transition: color 0.3s ease;
 
-  @include media(mobile) {
+  @include media(tablet) {
     font-size: 1.25rem;
   }
 
@@ -126,7 +126,7 @@ const toggleFAQ = (index) => {
     opacity: 1;
     padding: 1rem 0;
 
-    @include media(mobile) {
+    @include media(tablet) {
       padding: 0.5rem 0;
     }
   }

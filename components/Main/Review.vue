@@ -105,8 +105,8 @@ const props = defineProps({
 .block {
   margin: 7.5rem 0;
 
-  @include media(mobile) {
-    margin: 5rem 0;
+  @include media(tablet) {
+    margin: 3rem 0;
   }
 }
 
@@ -119,7 +119,7 @@ const props = defineProps({
   background: var(--background-02);
   border-radius: 1.875rem;
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0rem;
     padding: 2rem 1rem;
   }
@@ -130,7 +130,7 @@ const props = defineProps({
   flex-direction: column;
   gap: 1rem;
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0.5rem;
   }
 }
@@ -150,7 +150,7 @@ const props = defineProps({
   line-height: 110%;
   margin: 0 0 0.563rem 0;
 
-  @include media(mobile) {
+  @include media(tablet) {
     font-size: 0.875rem;
     margin: 0 0 0.25rem 0;
   }
@@ -162,7 +162,7 @@ const props = defineProps({
   font-weight: 500;
   color: var(--color-01);
 
-  @include media(mobile) {
+  @include media(tablet) {
     font-size: 0.875rem;
   }
 }
@@ -175,11 +175,10 @@ h2 {
   width: 5rem;
   min-width: 5rem;
   height: 5rem;
-  border: 0.063rem solid var(--border);
   border-radius: 50%;
   overflow: hidden;
 
-  @include media(mobile) {
+  @include media(tablet) {
     width: 3.188rem;
     min-width: 3.188rem;
     height: 3.188rem;
@@ -198,7 +197,7 @@ h2 {
   padding: 1.5rem;
   border-bottom: 0.063rem solid var(--color-01);
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0.5rem;
     padding: 1rem;
   }
@@ -218,7 +217,7 @@ h2 {
   padding: 3.25rem 1.5rem 1.5rem;
   position: relative;
 
-  @include media(mobile) {
+  @include media(tablet) {
     padding: 2.5rem 1rem 1rem;
     font-size: 0.875rem;
   }
@@ -235,7 +234,7 @@ h2 {
     top: 1.5rem;
     position: absolute;
 
-    @include media(mobile) {
+    @include media(tablet) {
       width: 0.5rem;
       height: 0.5rem;
     }
@@ -252,21 +251,21 @@ h2 {
     font-weight: 500;
     color: var(--color-01);
 
-    @include media(mobile) {
+    @include media(tablet) {
       font-size: 0.875rem;
     }
   }
 }
 
 .desktop {
-  @include media(mobile) {
+  @include media(tablet) {
     display: none;
   }
 }
 .mobile {
   margin-top: 0.5rem;
   display: none;
-  @include media(mobile) {
+  @include media(tablet) {
     display: flex;
   }
 }

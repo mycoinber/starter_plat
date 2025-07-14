@@ -77,7 +77,7 @@ const formattedDate = computed(() => {
   border-radius: 0.625rem;
   background: var(--background-02);
 
-  @include media(mobile) {
+  @include media(tablet) {
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -88,7 +88,7 @@ const formattedDate = computed(() => {
   gap: 1rem;
   width: 100%;
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0.5rem;
   }
 }
@@ -106,7 +106,7 @@ const formattedDate = computed(() => {
   gap: 2rem;
   width: 100%;
 
-  @include media(mobile) {
+  @include media(tablet) {
     flex-direction: column-reverse;
     justify-content: flex-start;
     gap: 0;

@@ -70,9 +70,12 @@ if (import.meta.server) {
     </DelayHydration>
   </ClientOnly>
 
-  <MainTitle v-if="data.article.H1" :data="data" />
+  <MainTitle v-if="data?.article?.H1" :data="data" />
 
-  <MainTableOfContent v-if="data && data.article.blocks.length" :data="data" />
+  <MainTableOfContent
+    v-if="data && data?.article?.blocks?.length"
+    :data="data"
+  />
 
   <MainSection v-for="(item, index) in sections" :data="item" />
 
@@ -104,7 +107,7 @@ if (import.meta.server) {
     z-index: 2;
     margin-bottom: 7.5rem;
 
-    @include media(mobile) {
+    @include media(tablet) {
       margin-bottom: 5rem;
       height: fit-content;
     }
@@ -163,7 +166,7 @@ if (import.meta.server) {
     height: 100%;
     object-fit: cover;
 
-    @include media(mobile) {
+    @include media(tablet) {
       object-fit: contain;
       object-position: top center;
     }

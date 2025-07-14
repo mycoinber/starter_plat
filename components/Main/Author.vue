@@ -80,7 +80,7 @@ const formattedDate = computed(() => {
   width: 100%;
   align-items: center;
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0.5rem;
   }
 }
@@ -98,7 +98,7 @@ const formattedDate = computed(() => {
   gap: 2rem;
   width: 100%;
 
-  @include media(mobile) {
+  @include media(tablet) {
     flex-direction: column-reverse;
     justify-content: flex-start;
     gap: 0;
@@ -107,13 +107,12 @@ const formattedDate = computed(() => {
 
 .img {
   display: block;
-  width: 5.188rem;
-  min-width: 5.188rem;
-  height: 5.188rem;
-  min-height: 5.188rem;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  min-height: 3rem;
   background: var(--background-02);
   border-radius: 50%;
-  border: 0.063rem solid var(--color-white);
   overflow: hidden;
 
   img {

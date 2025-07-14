@@ -77,8 +77,8 @@ const props = defineProps({
 .block {
   margin: 7.5rem 0;
 
-  @include media(mobile) {
-    margin: 5rem 0;
+  @include media(tablet) {
+    margin: 3rem 0;
   }
 }
 
@@ -88,7 +88,7 @@ const props = defineProps({
   gap: 2rem;
   overflow: hidden;
 
-  @include media(mobile) {
+  @include media(tablet) {
     gap: 0rem;
   }
 }
@@ -104,7 +104,7 @@ const props = defineProps({
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 
-  @include media(mobile) {
+  @include media(tablet) {
     display: flex;
     gap: 1rem;
     min-width: 100%;
@@ -125,7 +125,7 @@ const props = defineProps({
   background: var(--background-02);
   width: 100%;
 
-  @include media(mobile) {
+  @include media(tablet) {
     width: 20rem;
     min-width: 20rem;
   }

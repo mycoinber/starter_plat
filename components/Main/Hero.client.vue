@@ -85,7 +85,7 @@ const bgPath = computed(() => {
   position: relative;
   z-index: 2;
 
-  @include media(mobile) {
+  @include media(tablet) {
     position: absolute;
     bottom: 4rem;
     width: 100%;
@@ -105,7 +105,7 @@ h2 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 
-  @include media(mobile) {
+  @include media(tablet) {
     font-size: 2.875rem;
     margin: 0 0 1rem;
   }
@@ -120,7 +120,7 @@ p {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 
-  @include media(mobile) {
+  @include media(tablet) {
     margin-bottom: 1.5rem;
   }
 }

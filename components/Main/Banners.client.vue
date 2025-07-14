@@ -85,7 +85,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include media(mobile) {
+  @include media(tablet) {
     width: 20.813rem;
     min-width: 20.813rem;
     height: 9.375rem;
@@ -118,7 +118,7 @@ h3 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  @include media(mobile) {
+  @include media(tablet) {
     font-size: 1.438rem;
   }
 }
