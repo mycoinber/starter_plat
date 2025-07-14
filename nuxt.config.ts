@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   ssr: true,
   routeRules: {
     '/**': { isr: 60 },

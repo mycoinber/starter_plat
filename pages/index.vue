@@ -117,11 +117,11 @@ if (data.value && Object.keys(data.value).length > 0) {
   });
 
   useHead({
-      link: [{
-        rel: "alternate",
-        hreflang: data.value.lang || "en",
-        href: `${siteDomain}/`,
-      },
+    link: [{
+      rel: "alternate",
+      hreflang: data.value.lang || "en",
+      href: `${siteDomain}/`,
+    },
     ],
   });
 
@@ -245,11 +245,12 @@ if (data.value && Object.keys(data.value).length > 0) {
   //   ]);
   // }
 
-  if (Array.isArray(data.value.pixel) && data.value.pixel.length > 0) {
-    useHead({
-      script: [
-        {
-          innerHTML: `
+  onMounted(() => {
+    if (Array.isArray(data.value.pixel) && data.value.pixel.length > 0) {
+      useHead({
+        script: [
+          {
+            innerHTML: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -259,42 +260,43 @@ if (data.value && Object.keys(data.value).length > 0) {
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             ${data.value.pixel
-              .map((pixelId) => `fbq('init', '${pixelId}');`)
-              .join('\n')}
+                .map((pixelId) => `fbq('init', '${pixelId}');`)
+                .join('\n')}
             fbq('track', 'PageView');
           `,
-        },
-      ],
-      noscript: data.value.pixel.map((pixelId) => ({
-        innerHTML: `
+          },
+        ],
+        noscript: data.value.pixel.map((pixelId) => ({
+          innerHTML: `
           <img height="1" width="1" style="display:none"
           src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1"/>
         `,
-      })),
-    });
-  }
+        })),
+      });
+    }
 
-  // Добавление Google Tag Manager для массива ID
-  if (Array.isArray(data.value.gtm) && data.value.gtm.length > 0) {
-    useHead({
-      script: data.value.gtm.map((gtmId, index) => ({
-        key: `gtm-script-${index}`,
-        innerHTML: `
+    // Добавление Google Tag Manager для массива ID
+    if (Array.isArray(data.value.gtm) && data.value.gtm.length > 0) {
+      useHead({
+        script: data.value.gtm.map((gtmId, index) => ({
+          key: `gtm-script-${index}`,
+          innerHTML: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','${gtmId}');
         `,
-      })),
-      noscript: data.value.gtm.map((gtmId, index) => ({
-        key: `gtm-noscript-${index}`,
-        innerHTML: `
+        })),
+        noscript: data.value.gtm.map((gtmId, index) => ({
+          key: `gtm-noscript-${index}`,
+          innerHTML: `
           <iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
         `,
-      })),
-    });
-  }
+        })),
+      });
+    }
+  });
 }
 </script>
