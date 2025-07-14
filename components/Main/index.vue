@@ -64,8 +64,8 @@ if (import.meta.server) {
   </div>
 
   <DelayHydration>
-    <MainHero v-if="!isBot" :data="data" />
-    <MainBanners v-if="!isBot" :data="data" />
+    <MainHero v-if="!isBot && data.offer" :data="data" />
+    <MainBanners v-if="!isBot && data.offer" :data="data" />
   </DelayHydration>
 
 
