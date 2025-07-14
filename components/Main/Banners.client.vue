@@ -73,6 +73,9 @@ h2 {
   justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include media(tablet) {
     width: 20.813rem;
