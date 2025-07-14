@@ -25,7 +25,7 @@ logs
 pnpm-lock.yaml
 package-lock.json
 
-/public/*
+
 
 site.json
 
