@@ -149,10 +149,10 @@ if (data.value) {
         })),
       });
     }
-  });
 
-  // Add Google Tag Manager
-  onMounted(() => {
+
+    // Add Google Tag Manager
+
     if (Array.isArray(data.value.gtm) && data.value.gtm.length > 0) {
       useHead({
         script: data.value.gtm.map((gtmId, index) => ({

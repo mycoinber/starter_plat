@@ -16,11 +16,11 @@ const bgPath = computed(() => {
   // если есть offer и есть background[0].path — берем его
   if (
     props.data.offer &&
-    props.data.offer.background &&
-    props.data.offer.background[0] &&
-    props.data.offer.background[0].path
+    props.data.offer?.background &&
+    props.data.offer?.background[0] &&
+    props.data.offer?.background[0]?.path
   ) {
-    return props.data.offer.background[0].path;
+    return props.data.offer?.background[0]?.path;
   }
   // иначе — берем introImage[0].path
   return props.data.article?.introImage?.[0]?.path || '';
@@ -36,9 +36,9 @@ const bgPath = computed(() => {
     <div class="container">
       <div :class="styles.contentWrapper">
         <div :class="styles.textBlock">
-          <h2>{{ data.offer.title }}</h2>
+          <h2>{{ data.offer?.title }}</h2>
           <p>
-            {{ data.offer.description }}
+            {{ data.offer?.description }}
           </p>
           <GeneralButtonTwo :data="{
             link: data?.offer?.link,

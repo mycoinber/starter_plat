@@ -11,24 +11,24 @@ const props = defineProps({
 </script>
 
 <template>
-  <section :class="styles.banners" v-if="data.offer.sections.length">
+  <section :class="styles.banners" v-if="data.offer?.sections?.length">
     <div class="container">
-      <h2>{{ data.offer.title }}</h2>
+      <h2>{{ data.offer?.title }}</h2>
     </div>
     <!--  wrapper -->
     <div :class="styles.wrapper">
       <!--  list -->
       <div :class="styles.list">
         <!--  item -->
-        <div v-for="banner in data.offer.sections" :key="banner.id" :class="styles.item"
-          :style="{ backgroundImage: `url(/api/media/${banner.images[0].path})` }">
+        <div v-for="banner in data.offer?.sections" :key="banner.id" :class="styles.item"
+          :style="{ backgroundImage: `url(/api/media/${banner.images[0]?.path})` }">
           <!--  item content -->
           <div :class="styles['item-text']">
-            <h3>{{ banner.cta }}</h3>
-            <p>{{ banner.headline }}</p>
+            <h3>{{ banner?.cta }}</h3>
+            <p>{{ banner?.headline }}</p>
           </div>
           <GeneralButtonTwo :data="{
-            link: banner.link,
+            link: banner?.link,
             title: 'Play Now',
             target: '_blank',
             rel: 'noopener noreferrer',
